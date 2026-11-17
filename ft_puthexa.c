@@ -6,24 +6,32 @@
 /*   By: wkadiri <wkadiri@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 02:51:46 by wkadiri           #+#    #+#             */
-/*   Updated: 2026/11/14 03:02:03 by wkadiri          ###   ########.fr       */
+/*   Updated: 2026/11/17 16:41:14 by wkadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_base16(unsigned long nb, char *base)
+int	ft_base16(unsigned long nb, char *base)
 {
 	int	count;
+	int	check;
 
 	count = 0;
 	if (nb > 15)
-		count += ft_base16(nb / 16, base);
-	count += ft_putchar(base[nb % 16]);
-	return (count);
+	{
+		check = ft_base16(nb / 16, base);
+		if (check < 0)
+			return (-1);
+		count += check;
+	}
+	check = ft_putchar(base[nb % 16]);
+	if (check < 0)
+		return (-1);
+	return (count + check);
 }
 
-int	ft_puthexa(unsigned int nb, int type)
+int	ft_puthexa(unsigned long nb, char type)
 {
 	char	*base;
 

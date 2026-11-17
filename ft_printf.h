@@ -6,7 +6,7 @@
 /*   By: wkadiri <wkadiri@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 01:52:07 by wkadiri           #+#    #+#             */
-/*   Updated: 2026/11/14 01:52:48 by wkadiri          ###   ########.fr       */
+/*   Updated: 2026/11/17 16:43:24 by wkadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,12 @@
 # include <stdarg.h>
 
 int	ft_printf(const char *str, ...);
-int	ft_check_type(const char type, va_list args);
-int	ft_put_c(char c);
-int	ft_put_s(char *str);
-int	ft_put_d_i(int nb);
-int	ft_put_u(unsigned int nb);
-int	ft_put_x(unsigned int nb, int type);
-int	ft_put_p(void *arg);
-int	ft_base16(unsigned long nb, char *alpha);
+int	ft_check(const char type, va_list args);
+int	ft_putchar(char c);
+int	ft_putstr(char *str);
+int	ft_putnbr(int nb);
+int	ft_putunsigned(unsigned int nb);
+int	ft_puthexa(unsigned long nb, char type);
+int	ft_putaddress(void *arg);
 
 #endif

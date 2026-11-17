@@ -6,7 +6,7 @@
 /*   By: wkadiri <wkadiri@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 02:28:39 by wkadiri           #+#    #+#             */
-/*   Updated: 2026/11/14 02:29:01 by wkadiri          ###   ########.fr       */
+/*   Updated: 2026/11/16 14:11:50 by wkadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 int	ft_putchar(char c)
 {
-	return (write(1, &c, 1));
+	int	check;
+
+	check = write(1, &c, 1);
+	if (check != 1)
+		return (-1);
+	return (check);
 }
