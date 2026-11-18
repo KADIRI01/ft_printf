@@ -6,7 +6,7 @@
 /*   By: wkadiri <wkadiri@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 01:52:07 by wkadiri           #+#    #+#             */
-/*   Updated: 2026/11/17 16:43:24 by wkadiri          ###   ########.fr       */
+/*   Updated: 2026/11/17 21:21:10 by wkadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define FT_PRINTF_H
 # include <unistd.h>
 # include <stdlib.h>
-# include <string.h>
 # include <stdarg.h>
 
 int	ft_printf(const char *str, ...);
