@@ -6,7 +6,7 @@
 /*   By: wkadiri <wkadiri@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 02:08:09 by wkadiri           #+#    #+#             */
-/*   Updated: 2026/11/18 00:06:48 by wkadiri          ###   ########.fr       */
+/*   Updated: 2026/11/18 18:34:11 by wkadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_check(const char type, va_list args)
 		count = ft_putchar('%');
 	if (!ft_is_conversion(type))
 		count = ft_putchar('%') + ft_putchar(type);
-	if (count < 0 )
+	if (count < 0)
 		return (-1);
 	return (count);
 }

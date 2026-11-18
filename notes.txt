@@ -1,2 +1,0 @@
-- why retriving arguments : char to int 
-- why unsigned long in ft_puthexa
